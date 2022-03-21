@@ -52,7 +52,7 @@ plugins:
                       members_order: "alphabetical"
     - mkdocs-jupyter:
           include_source: true
-          execute: true
+          execute: false
 
 markdown_extensions:
     - attr_list
