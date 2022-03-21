@@ -4,6 +4,8 @@ site_url: https://ppeetteerrs.github.io/torch-conv-gradfix
 
 repo_url: https://github.com/ppeetteerrs/torch-conv-gradfix
 
+edit_uri: ""
+
 theme:
     name: material
     font:
@@ -64,6 +66,7 @@ markdown_extensions:
           permalink: false
 
 nav:
-    - Home: index.md
+    - Home: README.md
+    - Example: example.ipynb
     - API Reference: all.md
     - Report Issues: https://github.com/ppeetteerrs/torch-conv-gradfix/issues

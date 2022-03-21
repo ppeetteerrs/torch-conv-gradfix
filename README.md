@@ -12,3 +12,5 @@
 `conda install torch-conv-gradfix -c ppeetteerrs`
 
 ## Usage
+
+See the `Example` tab.

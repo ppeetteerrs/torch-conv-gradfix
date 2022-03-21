@@ -103,8 +103,9 @@ def test_cpu():
 
 
 def test_cuda():
-    fn_test(conv2d_test, get_tensors(False, "cuda"))
-    fn_test(conv_transpose2d_test, get_tensors(True, "cuda"))
+    if torch.cuda.is_available():
+        fn_test(conv2d_test, get_tensors(False, "cuda"))
+        fn_test(conv_transpose2d_test, get_tensors(True, "cuda"))
 
 
 if __name__ == "__main__":
