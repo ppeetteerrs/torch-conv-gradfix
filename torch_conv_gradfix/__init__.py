@@ -2,13 +2,8 @@ from contextlib import suppress
 from importlib import metadata
 from os import system as shell
 
-from torch_conv_gradfix.namespace import (
-    conv2d,
-    conv_transpose2d,
-    disable,
-    enable,
-    no_weight_grad,
-)
+from torch_conv_gradfix.namespace import (conv2d, conv_transpose2d, disable,
+                                          enable, no_weight_grad)
 
 __author__ = "Peter Yuen"
 __email__ = "ppeetteerrsx@gmail.com"
