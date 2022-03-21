@@ -1,35 +1,36 @@
 [tool.poetry]
-name = "simple-poetry"
-version = "0.0.0"
-description = "A clean, automated setup for publishing simple Python packages to PyPI using Poetry and GitHub Actions."
 authors = ["Peter Yuen <ppeetteerrsx@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-homepage = "https://github.com/ppeetteerrs/simple-poetry"
-repository = "https://github.com/ppeetteerrs/simple-poetry"
-documentation = "https://ppeetteerrs.github.io/simple-poetry"
+description = "(Taken from NVIDIA) Replacement for Pytorch's Conv2D and Conv2DTranspose with support for higher-order gradients and disabling unnecessary gradient computations."
+documentation = "https://ppeetteerrs.github.io/torch-conv-gradfix"
+homepage = "https://github.com/ppeetteerrs/torch-conv-gradfix"
 keywords = []
+license = "MIT"
+name = "torch-conv-gradfix"
+readme = "README.md"
+repository = "https://github.com/ppeetteerrs/torch-conv-gradfix"
+version = "0.0.0"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+torch = ">1.7"
 
 [tool.poetry.dev-dependencies]
+ipykernel = "^6.9.2"
+mkdocs-jupyter = "^0.20.1"
+mkdocs-material = "^8.2.5"
+mkdocstrings-python = "^0.6.6"
 pytest = "^7.1.1"
 pytest-cov = "^3.0.0"
-mkdocs-material = "^8.2.5"
-mkdocs-jupyter = "^0.20.1"
-ipykernel = "^6.9.2"
-mkdocstrings-python = "^0.6.6"
 
 [tool.poetry-dynamic-versioning]
-enable = true
+enable = false
 style = "semver"
 
 [tool.poetry.scripts]
-test = "simple_poetry:__test"
-serve = "simple_poetry:__serve"
-docs = "simple_poetry:__docs"
+docs = "torch_conv_gradfix:__docs"
+serve = "torch_conv_gradfix:__serve"
+test = "torch_conv_gradfix:__test"
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]

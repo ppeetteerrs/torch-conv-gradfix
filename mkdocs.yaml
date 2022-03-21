@@ -1,8 +1,8 @@
-site_name: simple-poetry
+site_name: torch-conv-gradfix
 
-site_url: https://ppeetteerrs.github.io/simple-poetry
+site_url: https://ppeetteerrs.github.io/torch-conv-gradfix
 
-repo_url: https://github.com/ppeetteerrs/simple-poetry
+repo_url: https://github.com/ppeetteerrs/torch-conv-gradfix
 
 theme:
     name: material
@@ -31,7 +31,7 @@ theme:
 plugins:
     - search
     - mkdocstrings:
-          watch: [simple_poetry]
+          watch: [torch_conv_gradfix]
           default_handler: python
           handlers:
               python:

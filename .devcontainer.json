@@ -1,11 +1,17 @@
 {
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "."
-	},
+	"dockerFile": "Dockerfile",
+	"context": ".",
+	"postCreateCommand": "poetry install --only=dev",
 	"runArgs": [
+		"--shm-size=1g",
+		"--gpus",
+		"all",
+		"--ulimit",
+		"memlock=-1",
+		"--ulimit",
+		"stack=67108864",
 		"--name",
-		"simple-poetry"
+		"torch_conv_gradfix"
 	],
 	"extensions": [
 		"ms-python.vscode-pylance",
@@ -23,7 +29,9 @@
 	"settings": {
 		"python.analysis.typeCheckingMode": "strict",
 		"python.analysis.diagnosticSeverityOverrides": {
-			"reportPrivateImportUsage": "none"
+			"reportPrivateImportUsage": "none",
+			"reportPrivateUsage": "none",
+			"reportIncompatibleMethodOverride": "none"
 		},
 		"python.sortImports.path": "/home/user/mambaforge/envs/user/bin/isort",
 		"python.linting.flake8Args": [

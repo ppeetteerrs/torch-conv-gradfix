@@ -1,6 +1,5 @@
-FROM ghcr.io/ppeetteerrs/python:3.8
+FROM ghcr.io/ppeetteerrs/pytorch:latest
 
-RUN pip install poetry poetry-dynamic-versioning && \
-	poetry install
+RUN pip install "poetry>=1.2.*" poetry-dynamic-versioning
 
 CMD ["zsh"]
