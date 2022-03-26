@@ -11,6 +11,9 @@
 
 `conda install torch-conv-gradfix -c ppeetteerrs`
 
+## NOTE
+This library does not work for PyTorch versions > 1.11.0. See the [github issue](https://github.com/pytorch/pytorch/issues/74437) for more information.
+
 ## Usage
 
 See the `Example` tab.
